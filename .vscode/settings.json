@@ -1,0 +1,4 @@
+{
+    "aicommit.provider": "openai",
+    "aicommit.model": "gtp-4omini"
+}
