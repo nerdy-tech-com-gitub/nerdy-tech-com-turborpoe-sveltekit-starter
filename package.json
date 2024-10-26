@@ -7,9 +7,9 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "prettier-plugin-svelte": "^3.2.2",
-    "turbo": "^2.0.8"
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "turbo": "^2.2.3"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {
@@ -18,8 +18,11 @@
   "name": "with-svelte",
   "dependencies": {
     "@apollo/client": "^3.11.8",
+    "@sveltejs/adapter-auto": "^3.3.1",
     "@sveltejs/kit": "^2.7.3",
+    "cookie": "^1.0.1",
     "graphql": "^16.9.0",
+    "postcss": "^8.4.47",
     "vite": "^5.4.10"
   }
 }

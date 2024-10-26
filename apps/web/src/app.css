@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply bg-gray-950 text-gray-100;
+}
+
+/* Custom component styles */
+.nav-link {
+  @apply relative py-1.5 text-sm font-medium text-gray-400 transition-colors duration-200
+         hover:text-gray-100 before:absolute before:inset-x-0 before:bottom-0 before:h-px 
+         before:origin-left before:scale-x-0 before:transform before:bg-brand-400 
+         before:transition-transform before:duration-200 hover:before:scale-x-100;
+}
+
+.nav-link.active {
+  @apply text-gray-100 before:scale-x-100;
+}
+
+.prose-custom {
+  @apply prose prose-invert
+    prose-a:text-brand-400 prose-a:no-underline hover:prose-a:text-brand-300
+    prose-headings:text-gray-100 prose-headings:font-semibold
+    prose-strong:text-gray-200 prose-code:text-gray-200
+    prose-blockquote:text-gray-400 prose-blockquote:border-l-gray-800;
+}
+
+.card {
+  @apply bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg overflow-hidden
+         transition duration-300 ease-in-out hover:border-gray-700
+         hover:shadow-[0_0_30px_-10px] hover:shadow-brand-500/20;
+}
+
+.heading-gradient {
+  @apply bg-gradient-to-r from-brand-400 to-brand-600 bg-clip-text text-transparent;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md text-sm font-medium
+         transition-colors focus-visible:outline-none focus-visible:ring-2
+         focus-visible:ring-brand-400 focus-visible:ring-offset-2 disabled:pointer-events-none
+         disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700 px-4 py-2;
+}
+
+.btn-secondary {
+  @apply btn border border-gray-800 bg-gray-950 text-gray-100 
+         hover:bg-gray-900 hover:border-gray-700 px-4 py-2;
+}
+
+.btn-ghost {
+  @apply btn text-gray-400 hover:text-gray-100 hover:bg-gray-900/50 px-3 py-2;
+}
+
+/* Scroll behavior */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-brand-500/30 text-gray-100;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-700;
+}

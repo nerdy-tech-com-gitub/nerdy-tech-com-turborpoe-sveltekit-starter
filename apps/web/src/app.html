@@ -5,8 +5,36 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		%sveltekit.head%
+		<title>Nerdy Tech - Technology Solutions & Expert Consultation</title>
+		<meta name="description" content="Your one-stop destination for cutting-edge technology solutions and expert consultation. We transform ideas into reality.">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				darkMode: 'class',
+				theme: {
+					extend: {
+						colors: {
+							indigo: {
+								500: '#6366f1',
+								600: '#4f46e5',
+								700: '#4338ca',
+								800: '#3730a3',
+								900: '#312e81'
+							}
+						}
+					}
+				}
+			}
+		</script>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+			
+			body {
+				font-family: 'Inter', sans-serif;
+			}
+		</style>
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+	<body class="bg-white dark:bg-gray-900">
+		<div>%sveltekit.body%</div>
 	</body>
 </html>
