@@ -7,6 +7,73 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.2] - 2024-03-28
+### Added
+- Feature Flags Enabled (all set to true):
+  - ENABLE_FEATURE_FLAGS
+  - ENABLE_BLOG_FEATURES
+  - ENABLE_API_FEATURES
+  - ENABLE_AUTH_FEATURES
+
+### Environment Configuration
+- Development Environment:
+  - All feature flags set to true
+  - Local testing enabled
+- Preview Environment:
+  - All feature flags enabled for all branches
+  - Branch-specific testing available
+- Production Environment:
+  - Full feature set enabled
+  - Controlled rollout ready
+
+### URLs and Access
+- Local Development:
+  - Web App: http://localhost:5175
+  - Documentation: http://localhost:5176
+- Production:
+  - Main site: https://nerdy-tech.com
+  - API Endpoint: https://www.nerdy-tech.com/graphql
+
+### Fixed
+- Updated all feature flags from 'yes' to 'true' for consistency
+- Synchronized values across all environments
+
+## [0.3.1] - 2024-03-28
+### Added
+- Feature Flags Environment Configuration
+  - Development: ENABLE_FEATURE_FLAGS=true
+  - Preview: ENABLE_FEATURE_FLAGS=true (all branches)
+  - Production: ENABLE_FEATURE_FLAGS=true
+
+### Development
+- Created feature/testing-env branch for safe testing
+- Local Development URLs:
+  - Web App: http://localhost:5175
+  - Documentation: http://localhost:5176
+- Implemented environment-specific feature flag controls
+- Enabled preview deployments for feature testing
+
+### Best Practices
+- Use feature/testing-env branch for testing changes
+- Preview deployments automatically created for pull requests
+- Production deployment only after preview validation
+- Feature flags synchronized across all environments
+
+## [0.3.0] - 2024-03-28
+### Added
+- Vercel Production Deployment
+  - Added ENABLE_FEATURE_FLAGS=true to production environment
+  - Linked repository: nerdy-tech-com-turborpoe-sveltekit-starter
+  - Domain configuration: nerdy-tech.com verified and active
+- Version Control
+  - Committed changes with message: "feat: Add WordPress integration and Vercel development setup"
+  - Synchronized with production deployment
+
+### Changed
+- Environment Configuration
+  - Updated Vercel environment variables
+  - Pulled latest environment configuration locally
+
 ## [0.2.0] - 2024-03-28
 ### Added
 - Vercel Development Environment Setup
@@ -41,4 +108,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Featured image support
 
 Signed-off-by: Claude AI <claude@anthropic.com>
-Date: March 28, 2024
+Date: March 28, 2024 16:05 UTC
